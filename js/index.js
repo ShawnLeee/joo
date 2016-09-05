@@ -1,4 +1,4 @@
-data = {
+var data = {
       "like_count" : "56",
       "post_text" : "年终了，就存了这么多过年，筒子们，你们能不能少炫富行吗？",
       "post_id" : "100630702",
@@ -7,11 +7,9 @@ data = {
       "comment_count" : "1"
     };
 $(document).ready(function(){
-	$.showLoading("正在加载...");
-	$(".joo-btn").click(function(){
-		$("body").append("<p>I LOVE JOO</p>");
+	$(".post-btn").click(function() {
+		$.post( "http://127.0.0.1:5000/api/v1.0/posts/", { story: "success:function(data,textStatus,jqXHR)", user_id: "21739009" });
 	})
-	senddata()
 })
 function senddata(){
 $.ajax({
