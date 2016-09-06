@@ -15,7 +15,7 @@ $(document).ready(function(){
 		// 	}
 		// );
 		$.ajax({
-			url:encodeURI("http://127.0.0.1:5000/api/v1.0/register/"),
+			url:encodeURI("http://52.43.221.136/api/v1.0/register/"),
 			type:"POST",
 			data:{user_name: user_name, password: password },
 			dataType:"json",
